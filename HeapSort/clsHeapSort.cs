@@ -1,28 +1,10 @@
-﻿namespace Algorithm_Task
+﻿namespace HeapSort
 {
-    class Program
+    public class clsHeapSort
     {
-        static void Main(string[] args)
-        {
-            int[] arr = new int[1000];
-
-            Random random = new Random();
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                arr[i] = random.Next();
-            }
-
-            Sort(arr);
-
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + "\n");
-            }
-        }
         static int lastIndex;
 
-        static void Sort(int[] arr)
+        public static void HeapSort(int[] arr)
         {
             lastIndex = arr.Length - 1;
 
@@ -35,7 +17,7 @@
                 lastIndex--;
                 Heapify(arr, 0);
             }
-            
+
         }
         static void Heapify(int[] arr, int PIndex)
         {
